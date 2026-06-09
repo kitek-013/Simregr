@@ -17,6 +17,7 @@
 #' @export
 lin.regr <- function(x, y, na.rm=FALSE)
 {
-    x <- .Call("lin_regr", x, y, na.rm, PACKAGE="Simregr")
-    cat(x)
+    m <- .Call("lin_regr", x, y, na.rm, PACKAGE="Simregr")
+    cat(m,"\n")
+    m
 }

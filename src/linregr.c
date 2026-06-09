@@ -79,8 +79,8 @@ SEXP lin_regr(SEXP x, SEXP y, SEXP na_rm)
         int *pxx = mnoz2(px, px, nx);
         int pxsum = sum2(px, nx);
         int pysum = sum2(py, ny);
-        pz[0] = ((n * sum2(pxy, nx)) - (pxsum * pysum))/(n * sum2(pxx, nx) - pxsum * pxsum);
-        pz[1] = ((double)pysum)/n - pz[0] * (((double)pysum)/n);
+        pz[0] = ((n * (double)sum2(pxy, nx)) - (pxsum * pysum))/(n * sum2(pxx, nx) - pxsum * pxsum);
+        pz[1] = (((double)pysum) - pz[0] * ((double)pxsum))/n;
         free(pxy); free(pxx);
     }
     else
@@ -92,7 +92,7 @@ SEXP lin_regr(SEXP x, SEXP y, SEXP na_rm)
         double pxsum = sum1(px, nx);
         double pysum = sum1(py, ny);
         pz[0] = ((n * sum1(pxy, nx)) - (pxsum * pysum))/(n * sum1(pxx, nx) - pxsum * pxsum);
-        pz[1] = pysum/n - pz[0] * pysum/n;
+        pz[1] = (pysum - pz[0] * pxsum)/n;
         free(pxy); free(pxx);
     }
 
