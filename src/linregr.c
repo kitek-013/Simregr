@@ -41,13 +41,37 @@ int* mnoz2(const int* x,const int* y, size_t n)
 
 SEXP lin_regr(SEXP x, SEXP y, SEXP na_rm)
 {
-    if(!(Rf_isReal(x)) && !(Rf_isInteger(x))) 
-        Rf_error("x is not numeric");
-    if(!(Rf_isReal(y)) && !(Rf_isInteger(y))) 
-        Rf_error("y is not numeric");
-    if(!(Rf_isLogical(na_rm))) 
-        Rf_error("na.rm is not logical");
-    if(!(XLENGTH(na_rm)))
 
+
+
+
+    if ((!Rf_isReal(x)) && (!Rf_isInteger(x))) Rf_error("x is not numeric vector");
+    if ((!Rf_isReal(y)) && (!Rf_isInteger(y)) Rf_error("y is not numeric vector");
+    if(!(Rf_isLogical(na_rm))) Rf_error("na.rm is not logical");
+    if(!(XLENGTH(na_rm) == 1)) Rf_error("na.rm is not of length 1");
+
+    size_t nx = XLENGTH(x);
+    size_t ny = XLENGTH(y);
+    if(!(nx == ny)) Rf_error("x and y are not of the same length");
+
+            double r[2];
+
+    if(Rf_isInteger(x) && Rf_isInteger(y)){
+        int *px = REAL(x);
+        int *py = REAL(y);
+
+    }
+    else
+    {
+        double *px = REAL(x);
+        double *py = REAL(y);
+    }
+
+
+
+    SEXP z = Rf_allocVector(REALSXP, 2);
+    PROTECT(z);
+    UNPROTECT(z);
+    return z;
 
 }
