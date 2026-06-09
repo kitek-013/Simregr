@@ -1,0 +1,53 @@
+#ifndef R_NO_REMAP
+#define R_NO_REMAP
+#endif
+#include <R.h>
+#include <Rinternals.h>
+#include <stdio.h>
+
+
+
+double sum1(const double *x, size_t n)
+{
+    double r=0;
+    for(size_t i=0; i<n; i++)
+        r += x[i];
+    return r;
+}
+
+int sum1(const int *x, size_t n)
+{
+    int r=0;
+    for(size_t i=0; i<n; i++)
+        r += x[i];
+    return r;
+}
+
+double* mnoz1(const double* x,const double* y, size_t n)
+{
+    double* r;
+    for(size_t i=0; i<n; i++)
+        r[i] = x[i]*y[i];
+    return r;
+}
+
+int* mnoz2(const int* x,const int* y, size_t n)
+{
+    int* r;
+    for(size_t i=0; i<n; i++)
+        r[i] = x[i]*y[i];
+    return r;
+}
+
+SEXP lin_regr(SEXP x, SEXP y, SEXP na_rm)
+{
+    if(!(Rf_isReal(x)) && !(Rf_isInteger(x))) 
+        Rf_error("x is not numeric");
+    if(!(Rf_isReal(y)) && !(Rf_isInteger(y))) 
+        Rf_error("y is not numeric");
+    if(!(Rf_isLogical(na_rm))) 
+        Rf_error("na.rm is not logical");
+    if(!(XLENGTH(na_rm)))
+
+
+}
