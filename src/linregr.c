@@ -15,7 +15,7 @@ double sum1(const double *x, size_t n)
     return r;
 }
 
-int sum1(const int *x, size_t n)
+int sum2(const int *x, size_t n)
 {
     int r=0;
     for(size_t i=0; i<n; i++)
@@ -67,7 +67,9 @@ SEXP lin_regr(SEXP x, SEXP y, SEXP na_rm)
     size_t ny = XLENGTH(y);
     if(!(nx == ny)) Rf_error("x and y are not of the same length");
 
-    double r[2];
+    SEXP z = Rf_allocVector(REALSXP, 2);
+    PROTECT(z);
+    double* pz = REAL(z);
 
     if(Rf_isInteger(x) && Rf_isInteger(y)){
         int *px = INTEGER(x);
@@ -76,20 +78,27 @@ SEXP lin_regr(SEXP x, SEXP y, SEXP na_rm)
         int *pxx = mnoz2(x, x, nx);
         int *pxsq = square2(x, nx);
         int pxsum = sum2(px, nx);
-        r[0] = ((nx * sum2(pxy, nx)) - (pxsum * sum2(py, ny)))/(nx * sum2(pxsq, nx) - pxsum * pxsum)
-
+        int pysum = sum2(py, ny);
+        pz[0] = ((nx * sum2(pxy, nx)) - (pxsum * pysum))/(nx * sum2(pxsq, nx) - pxsum * pxsum)
+        pz[1] = ((double)pysum)/n - pz[0] * (((double)pysum)/n);
     }
     else
     {
         double *px = REAL(x);
         double *py = REAL(y);
+        double *pxy = mnoz1(x, y, nx);
+        double *pxx = mnoz1(x, x, nx);
+        double *pxsq = square1(x, nx);
+        double pxsum = sum1(px, nx);
+        double pysum = sum1(py, ny);
+        pz[0] = ((nx * sum1(pxy, nx)) - (pxsum * pysum))/(nx * sum1(pxsq, nx) - pxsum * pxsum)
+        pz[1] = pysum/n - pz[0] * pysum/n;
     }
 
+    free(pxy); free(pxx); free(pxsq);
 
 
-    SEXP z = Rf_allocVector(REALSXP, 2);
-    PROTECT(z);
-    UNPROTECT(z);
+    UNPROTECT(1);
     return z;
 
 }
