@@ -1,0 +1,13 @@
+Package: Simregr
+Version: 0.1
+Date: 2026-06-07
+Title: Simple regressions and numpy functions
+Description: There are implemented a few vectorised methods from numpy. And a linear regression.
+Authors@R: c(person
+    ("Bartosz", "Kitewski", role = c("aut", "cre"),
+    email = "01199235@pw.edu.pl"))
+Author: Bartosz Kitewski [aut, cre]
+Maintainer: Bartosz Kitewski <01199235@pw.edu.pl>
+License: AGPL (>= 3)
+RoxygenNote: 7.3.3
+Encoding: UTF-8

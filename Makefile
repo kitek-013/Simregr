@@ -1,4 +1,4 @@
 all:
-	Rscript -e "roxygen2::roxygenise(".")" 
+	Rscript -e 'roxygen2::roxygenise(".")'
 	R CMD INSTALL .
-	Rscript -e ""
+	#Rscript -e 'tinytest::test_package("mojpakiet")'
