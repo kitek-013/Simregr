@@ -19,6 +19,11 @@
 #' which is best-fit for the data given, and the second
 #' value is the y-intercept.
 #'
+#' @examples
+#' lin.regr(1:10, 11:20)
+#' x <- seq(0, pi, pi/16)
+#' lin.regr(x, sin(x))
+#'
 #' @export
 lin.regr <- function(x, y, na.rm=FALSE)
 {
