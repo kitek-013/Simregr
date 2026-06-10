@@ -2,3 +2,4 @@
 .RData
 *.so
 *.o
+docs
