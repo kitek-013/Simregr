@@ -28,6 +28,6 @@
 lin.regr <- function(x, y, na.rm=FALSE)
 {
     m <- .Call("lin_regr", x, y, na.rm, PACKAGE="Simregr")
-    cat(m,"\n")
+    #cat(m,"\n")
     m
 }
