@@ -9,5 +9,5 @@ Authors@R: c(person
 Author: Bartosz Kitewski [aut, cre]
 Maintainer: Bartosz Kitewski <01199235@pw.edu.pl>
 License: MIT + file LICENSE
-RoxygenNote: 7.3.3
 Encoding: UTF-8
+Config/roxygen2/version: 8.0.0

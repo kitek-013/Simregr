@@ -11,4 +11,9 @@ There are implemented a few vectorised methods from numpy. And a linear regressi
 \author{
 \strong{Maintainer}: Bartosz Kitewski \email{01199235@pw.edu.pl}
 
+Authors:
+\itemize{
+  \item Bartosz Kitewski \email{01199235@pw.edu.pl}
+}
+
 }
