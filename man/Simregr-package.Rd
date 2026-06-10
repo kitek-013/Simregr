@@ -8,6 +8,13 @@
 \description{
 There are implemented a few vectorised methods from numpy. And a linear regression.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://kitek-013.github.io/Simregr/}
+}
+
+}
 \author{
 \strong{Maintainer}: Bartosz Kitewski \email{01199235@pw.edu.pl}
 

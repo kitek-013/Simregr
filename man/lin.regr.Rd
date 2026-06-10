@@ -24,3 +24,9 @@ Function takes two vectors of the same length and
 calculates the best-fit linear function using
 Method of Least Squares.
 }
+\examples{
+lin.regr(1:10, 11:20)
+x <- seq(0, pi, pi/16)
+lin.regr(x, sin(x))
+
+}
