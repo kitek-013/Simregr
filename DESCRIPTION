@@ -8,6 +8,6 @@ Authors@R: c(person
     email = "01199235@pw.edu.pl"))
 Author: Bartosz Kitewski [aut, cre]
 Maintainer: Bartosz Kitewski <01199235@pw.edu.pl>
-License: AGPL (>= 3)
+License: MIT + file LICENSE
 RoxygenNote: 7.3.3
 Encoding: UTF-8
