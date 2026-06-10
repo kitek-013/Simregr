@@ -1,6 +1,6 @@
 # Simregr
 
----
+
 *Simregr* is a package which mplements simple regressions.
 
 ## Installation
