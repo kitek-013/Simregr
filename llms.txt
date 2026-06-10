@@ -1,0 +1,19 @@
+# Simregr
+
+*Simregr* is a package which mplements simple regressions.
+
+## Installation
+
+You need only to pull this repository and then execute ’‘’make’’’ in
+terminal then you will be able to use this package.
+
+# Package index
+
+## All functions
+
+- [`Simregr`](https://kitek-013.github.io/Simregr/reference/Simregr-package.md)
+  [`Simregr-package`](https://kitek-013.github.io/Simregr/reference/Simregr-package.md)
+  : Simregr: Simple regressions and numpy functions
+- [`lin.regr()`](https://kitek-013.github.io/Simregr/reference/lin.regr.md)
+  : Linear Regression
+

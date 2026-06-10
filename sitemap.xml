@@ -1,10 +1,10 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>/404.html</loc></url>
-<url><loc>/LICENSE-text.html</loc></url>
-<url><loc>/authors.html</loc></url>
-<url><loc>/index.html</loc></url>
-<url><loc>/reference/Simregr-package.html</loc></url>
-<url><loc>/reference/index.html</loc></url>
-<url><loc>/reference/lin.regr.html</loc></url>
+<url><loc>https://kitek-013.github.io/Simregr/404.html</loc></url>
+<url><loc>https://kitek-013.github.io/Simregr/LICENSE-text.html</loc></url>
+<url><loc>https://kitek-013.github.io/Simregr/authors.html</loc></url>
+<url><loc>https://kitek-013.github.io/Simregr/index.html</loc></url>
+<url><loc>https://kitek-013.github.io/Simregr/reference/Simregr-package.html</loc></url>
+<url><loc>https://kitek-013.github.io/Simregr/reference/index.html</loc></url>
+<url><loc>https://kitek-013.github.io/Simregr/reference/lin.regr.html</loc></url>
 </urlset>
 
