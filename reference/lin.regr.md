@@ -28,3 +28,13 @@ lin.regr(x, y, na.rm = FALSE)
 Returns a numeric vector with two elements, the first one is slope of
 the linear function which is best-fit for the data given, and the second
 value is the y-intercept.
+
+## Examples
+
+``` r
+lin.regr(1:10, 11:20)
+#> [1]  1 10
+x <- seq(0, pi, pi/16)
+lin.regr(x, sin(x))
+#> [1] -2.125746e-16  5.972453e-01
+```
