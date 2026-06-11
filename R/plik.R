@@ -28,8 +28,18 @@
 lin.regr <- function(x, y, na.rm=FALSE)
 {
     m <- .Call("lin_regr", x, y, na.rm, PACKAGE="Simregr")
-    #cat(m,"\n")
-    plot(x, y, col = "navy", lwd = 2)
+    plot(x, y, col = "navy", lwd = 2,
+    xlab = "X",
+    ylab = "Y",
+    main = "Linear regression with Method of Least Squares"
+    )
     abline(a = m[2], b = m[1], col = "red", lwd = 3)
+    legend("topleft",
+       legend = sprintf("y = %.2f + %.2fx", m[1], m[2]),
+       col = "red",
+       lty = 1,
+       lwd = 2,
+       bty = "n")
+
     m
 }

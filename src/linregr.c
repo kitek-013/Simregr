@@ -39,21 +39,6 @@ int* mnoz2(const int* x,const int* y, size_t n)
     return r;
 }
 
-// double* square1(const double *x, size_t n)
-// {
-//     double* r = (double*)malloc(n * sizeof(double));
-//     for(size_t i=0; i<n; i++)
-//         r[i] = x[i] * x[i];
-//     return r;
-// }
-//
-// int* square2(const int *x, size_t n)
-// {
-//     int* r = (int*)malloc(n * sizeof(int));
-//     for(size_t i=0; i<n; i++)
-//         r[i] = x[i] * x[i];
-//     return r;
-// }
 
 SEXP lin_regr(SEXP x, SEXP y, SEXP na_rm)
 {
