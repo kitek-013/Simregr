@@ -8,6 +8,7 @@ Authors@R: c(person
     email = "01199235@pw.edu.pl"))
 Author: Bartosz Kitewski [aut, cre]
 Maintainer: Bartosz Kitewski <01199235@pw.edu.pl>
+Suggests: tinytest
 License: MIT + file LICENSE
 Encoding: UTF-8
 Config/roxygen2/version: 8.0.0
