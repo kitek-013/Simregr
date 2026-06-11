@@ -33,8 +33,10 @@ value is the y-intercept.
 
 ``` r
 lin.regr(1:10, 11:20)
+
 #> [1]  1 10
 x <- seq(0, pi, pi/16)
 lin.regr(x, sin(x))
+
 #> [1] -2.125746e-16  5.972453e-01
 ```
