@@ -3,3 +3,5 @@
 *.so
 *.o
 docs
+src/*.so
+src/*.o
