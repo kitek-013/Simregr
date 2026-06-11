@@ -29,5 +29,7 @@ lin.regr <- function(x, y, na.rm=FALSE)
 {
     m <- .Call("lin_regr", x, y, na.rm, PACKAGE="Simregr")
     #cat(m,"\n")
+    plot(x, y, col = "navy", lwd = 2)
+    abline(a = m[1], b = m[0], col = "red", lwd = 3)
     m
 }
